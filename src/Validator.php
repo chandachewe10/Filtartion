@@ -2,9 +2,7 @@
 
 namespace Chandachewe\Filtration;
 
-
-
-class Inputs
+class Validator
 {
     /**
      * Input String.
@@ -18,7 +16,11 @@ class Inputs
      *
      * @var string
      */
-    public $email;
+    public function email($email){
+
+        return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+
+    }
 
     /**
      * Input Date.
