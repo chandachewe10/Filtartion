@@ -9,6 +9,8 @@ it('asserts Email is Valid', function () {
    $validate_email = new Validator();
  
    // Act
+
+   
   
   $validate = $validate_email->email('chewec03@gmail.com');
 
