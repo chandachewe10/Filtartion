@@ -4,8 +4,6 @@ namespace Chandachewe\Filtration;
 
 class Validator
 {
-
-    
     /**
      * Input String.
      *
@@ -18,10 +16,9 @@ class Validator
      *
      * @var string
      */
-    public function email($email){
-
+    public function email($email)
+    {
         return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-
     }
 
     /**
@@ -90,7 +87,7 @@ class Validator
     /**
      * Input Phone.
      *
-     * @var double
+     * @var float
      */
     public $phone_zm;
 }
