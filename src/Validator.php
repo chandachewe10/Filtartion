@@ -4,6 +4,8 @@ namespace Chandachewe\Filtration;
 
 class Validator
 {
+
+    
     /**
      * Input String.
      *
