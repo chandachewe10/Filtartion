@@ -2,95 +2,41 @@
 
 namespace Chandachewe\Filtration;
 
+use Chandachewe\Filtration\Rules;
+
+
 class Validator
 {
-
+    use Rules;
     
-    /**
-     * Input String.
-     *
-     * @var string
-     */
-    public $string;
+
 
     /**
-     * Input Email.
+     * Validating Data Email.
      *
      * @var string
+     * @param string
+     * @return boolean
      */
-    public function email($email){
-
-        return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-
+    public function filtrateEmail(string $data)
+    {
+      return Validator::email($data);
+       
+          
     }
 
+
     /**
-     * Input Date.
+     * Validating Data String.
      *
      * @var string
+     * @param string
+     * @return boolean
      */
-    public $date;
-
-    /**
-     * Input URL.
-     *
-     * @var string
-     */
-    public $url;
-
-    /**
-     * Input Password.
-     *
-     * @var string
-     */
-    public $password;
-
-    /**
-     * Input File.
-     *
-     * @var string
-     */
-    public $file;
-
-    /**
-     * Input Image.
-     *
-     * @var string
-     */
-    public $image;
-
-    /**
-     * Input IPV4.
-     *
-     * @var string
-     */
-    public $ipv4;
-
-    /**
-     * Input IPV6.
-     *
-     * @var string
-     */
-    public $ipv6;
-
-    /**
-     * Input Integer.
-     *
-     * @var int
-     */
-    public $integer;
-
-    /**
-     * Input NRC.
-     *
-     * @var string
-     */
-    public $nrc_zm;
-
-    /**
-     * Input Phone.
-     *
-     * @var double
-     */
-    public $phone_zm;
+    public function filtrateString(string $data)
+    {
+      return Validator::string($data);
+       
+          
+    }
 }

@@ -4,12 +4,12 @@ use Chandachewe\Filtration\Validator;
 
 
 
-it('asserts Email is Valid', function () {
+it('asserts String is Valid', function () {
    // Prepare
-   $validate_email = new Validator();
+   $validate_string = new Validator();
  
    // Act  
-  $validate = $validate_email->filtrateEmail('chewec03@gmail.com');
+  $validate = $validate_string->filtrateString('L');
 
 
    // Assert
