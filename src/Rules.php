@@ -44,6 +44,21 @@ trait Rules
        $filtrateString = is_string($string) == true; 
        return $filtrateString;
        }
+
+
+
+         /**
+     * Input String.
+     *
+     * @var string
+     * @param string $string
+     * @return boolean
+     */
+    public static function url(string $url)
+    {
+        $filtrateURL = filter_var($url, FILTER_VALIDATE_URL) == true;
+        return $filtrateURL;
+       }
     
 
   

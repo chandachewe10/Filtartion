@@ -39,4 +39,19 @@ class Validator
        
           
     }
+
+
+     /**
+     * Validating Data String.
+     *
+     * @var string
+     * @param string
+     * @return boolean
+     */
+    public function filtrateURL(string $data)
+    {
+      return Validator::url($data);
+       
+          
+    }
 }
