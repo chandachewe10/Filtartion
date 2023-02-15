@@ -1,22 +1,15 @@
-<?php 
+<?php
+
 require_once './vendor/autoload.php';
 use Chandachewe\Filtration\Validator;
 
-
-
 it('asserts Email is Valid', function () {
-   // Prepare
-   $validate_email = new Validator();
- 
-   // Act  
-  $validate = $validate_email->filtrateEmail('chewec03@gmail.com');
+    // Prepare
+    $validate_email = new Validator();
 
+    // Act
+    $validate = $validate_email->filtrateEmail('chewec03@gmail.com');
 
-   // Assert
-   expect($validate)->toEqual(1);
- 
-    
+    // Assert
+    expect($validate)->toEqual(1);
 });
-
-
-
